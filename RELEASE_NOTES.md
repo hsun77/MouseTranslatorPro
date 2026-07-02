@@ -1,3 +1,19 @@
+# MouseTranslatorPro v0.2.1
+
+Friend-ready packaging update.
+
+## Fixed
+
+- Packaged EXE now writes `config.json` and logs next to `MouseTranslatorPro.exe`, so an unzipped folder can be used directly.
+
+## Packaging
+
+- Added a friend-facing quick start guide.
+- Added a Chinese launch batch file.
+- Prepared a ready-to-send zip for Google, Tencent Cloud TMT, and Youdao usage.
+
+---
+
 # MouseTranslatorPro v0.2.0
 
 Adds domestic translation providers.

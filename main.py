@@ -10,7 +10,7 @@ from config_manager import ensure_config
 
 
 def main() -> int:
-    app_dir = Path(__file__).resolve().parent
+    app_dir = Path(sys.executable).resolve().parent if getattr(sys, "frozen", False) else Path(__file__).resolve().parent
     ensure_config()
 
     app = QApplication(sys.argv)
