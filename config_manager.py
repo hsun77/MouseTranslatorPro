@@ -26,6 +26,14 @@ DEFAULT_CONFIG: dict[str, Any] = {
     "openai_model": "gpt-4.1-mini",
     "deepl_api_key_env": "DEEPL_API_KEY",
     "openai_api_key_env": "OPENAI_API_KEY",
+    "baidu_app_id_env": "BAIDU_TRANSLATE_APP_ID",
+    "baidu_secret_key_env": "BAIDU_TRANSLATE_SECRET_KEY",
+    "youdao_app_key_env": "YOUDAO_APP_KEY",
+    "youdao_app_secret_env": "YOUDAO_APP_SECRET",
+    "tencent_secret_id_env": "TENCENTCLOUD_SECRET_ID",
+    "tencent_secret_key_env": "TENCENTCLOUD_SECRET_KEY",
+    "tencent_region": "ap-guangzhou",
+    "tencent_project_id": 0,
 }
 
 

@@ -1,3 +1,23 @@
+# MouseTranslatorPro v0.2.0
+
+Adds domestic translation providers.
+
+## New
+
+- Added Baidu Translate provider through Baidu Translate Open Platform API.
+- Added Youdao Zhiyun provider through Youdao text translation API.
+- Added Tencent Cloud TMT provider through Tencent Cloud SDK.
+- Added provider choices to the settings window.
+- Added domestic provider environment variable documentation.
+
+## Required environment variables
+
+- Baidu: `BAIDU_TRANSLATE_APP_ID`, `BAIDU_TRANSLATE_SECRET_KEY`
+- Youdao: `YOUDAO_APP_KEY`, `YOUDAO_APP_SECRET`
+- Tencent Cloud: `TENCENTCLOUD_SECRET_ID`, `TENCENTCLOUD_SECRET_KEY`
+
+---
+
 # MouseTranslatorPro v0.1.0
 
 Initial Windows-only release.

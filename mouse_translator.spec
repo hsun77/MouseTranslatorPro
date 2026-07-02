@@ -7,6 +7,8 @@ from pathlib import Path
 hiddenimports = []
 hiddenimports += collect_submodules("pynput")
 hiddenimports += collect_submodules("pyautogui")
+hiddenimports += collect_submodules("tencentcloud.common")
+hiddenimports += collect_submodules("tencentcloud.tmt.v20180321")
 icon_path = "assets/icon.ico" if Path("assets/icon.ico").exists() else None
 
 

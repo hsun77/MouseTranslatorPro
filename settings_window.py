@@ -32,7 +32,7 @@ class SettingsWindow(QWidget):
         form.addRow("状态", self.enabled_box)
 
         self.provider_combo = QComboBox()
-        self.provider_combo.addItems(["google", "openai", "deepl"])
+        self.provider_combo.addItems(["google", "baidu", "youdao", "tencent", "openai", "deepl"])
         self.provider_combo.setCurrentText(str(config.get("provider", "google")))
         form.addRow("翻译服务", self.provider_combo)
 
