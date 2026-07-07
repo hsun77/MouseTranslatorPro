@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import time
+import uuid
 from typing import Optional
 
 import pyautogui
@@ -24,9 +25,14 @@ def set_clipboard_text(text: str) -> bool:
 
 
 def copy_current_selection(wait_seconds: float = 0.18) -> str:
+    sentinel = f"__MOUSE_TRANSLATOR_PRO_EMPTY_SELECTION_{uuid.uuid4()}__"
+    sentinel_ready = set_clipboard_text(sentinel)
     pyautogui.hotkey("ctrl", "c")
     time.sleep(wait_seconds)
-    return get_clipboard_text()
+    copied = get_clipboard_text()
+    if sentinel_ready and copied == sentinel:
+        return ""
+    return copied
 
 
 class ClipboardSnapshot:

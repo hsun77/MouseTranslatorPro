@@ -1,3 +1,15 @@
+# MouseTranslatorPro v0.2.2
+
+Bug fix release.
+
+## Fixed
+
+- Fixed repeated popups when the mouse is clicked without selecting text. The app now uses a temporary clipboard sentinel to detect whether `Ctrl+C` actually copied a new text selection.
+- Empty clicks no longer reuse the previous clipboard text as a fake selection.
+- When no text is selected, the app restores the original clipboard even if normal clipboard restoration is disabled.
+
+---
+
 # MouseTranslatorPro v0.2.1
 
 Friend-ready packaging update.

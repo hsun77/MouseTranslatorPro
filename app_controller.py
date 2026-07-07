@@ -90,13 +90,14 @@ class AppController(QObject):
         time.sleep(0.18)
         snapshot = ClipboardSnapshot()
         snapshot.capture()
+        selected = ""
         try:
             selected = copy_current_selection(wait_seconds=0.08)
         except Exception as exc:
             self.logger.warning("copy_selection_failed error=%s", type(exc).__name__)
             return
         finally:
-            if self.config.get("restore_clipboard", True):
+            if self.config.get("restore_clipboard", True) or not selected:
                 try:
                     if not snapshot.restore():
                         self.logger.info("clipboard_restore_skipped")
